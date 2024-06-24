@@ -9,11 +9,11 @@ import os
 import torch
 import torch.distributed as dist
 
-try:
-    from torch._six import inf
-except:
-    from torch import inf
-
+# try:
+#     from torch._six import inf
+# except:
+#     from torch import inf
+from torch import inf
 
 def load_checkpoint(config, model, optimizer, lr_scheduler, loss_scaler, logger):
     logger.info(f"==============> Resuming form {config.MODEL.RESUME}....................")
